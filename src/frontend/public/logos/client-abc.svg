@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72" role="img" aria-labelledby="title">
+  <title id="title">Xây dñng ABC</title>
+  <rect width="220" height="72" fill="none"/>
+  <g transform="translate(15 15)">
+    <rect x="0" y="11" width="14" height="30" rx="2" fill="#e8521a"/>
+    <rect x="18" y="0" width="14" height="41" rx="2" fill="#0f2340"/>
+    <rect x="36" y="19" width="14" height="22" rx="2" fill="#f5a623"/>
+  </g>
+  <text x="80" y="35" fill="#0f2340" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="2">ABC</text>
+  <text x="82" y="51" fill="#6b7280" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" letter-spacing="1.8">CONSTRUCTION</text>
+</svg>

@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Truck, CheckCircle, MapPin, Clock, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Truck,
+  CheckCircle,
+  MapPin,
+  Clock,
+  Zap,
+} from "lucide-react";
 
 const stats = [
   { value: "500+", label: "Khách hàng B2B", icon: "🏢" },
@@ -24,13 +31,16 @@ const fadeLeft = {
 };
 const fadeRight = {
   hidden: { opacity: 0, x: 32 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease, delay: 0.15 } },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease, delay: 0.15 },
+  },
 };
 
 export default function HeroBanner() {
   return (
     <section className="relative min-h-screen bg-secondary flex items-center overflow-hidden">
-
       {/* ── Layered background ── */}
       {/* Dot grid */}
       <div className="dot-grid absolute inset-0 pointer-events-none" />
@@ -54,32 +64,42 @@ export default function HeroBanner() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pt-32 lg:pb-24 grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center w-full">
-
         {/* ── Left: Text ── */}
-        <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col">
-
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col"
+        >
           {/* Badge */}
           <motion.div variants={fadeUp} className="mb-7">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.14em] border border-primary/30 bg-primary/[0.08] text-primary">
               <Zap className="w-3 h-3 fill-primary" />
-              Nền tảng logistics VLXD B2B #1 Việt Nam
+              Nền tảng logistics B2B #1 Việt Nam
             </span>
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 variants={fadeLeft} className="font-heading font-bold leading-[1.05] mb-6">
-            <span className="block text-5xl sm:text-6xl lg:text-[4.25rem] text-white mb-1">
+          <motion.h1
+            variants={fadeLeft}
+            className="font-heading font-bold leading-[1.05] mb-6"
+          >
+            <span className="block text-4xl sm:text-4xl lg:text-[3.25rem] text-white mb-1">
               Vận chuyển VLXD
             </span>
-            <span className="block text-5xl sm:text-6xl lg:text-[4.25rem] text-gradient-primary">
-              Nhanh – Đúng – Chắc
+            <span className="block text-4xl sm:text-4xl lg:text-[3.25rem] text-gradient-primary">
+              Nhanh Chóng – An Toàn
             </span>
           </motion.h1>
 
           {/* Description */}
-          <motion.p variants={fadeUp} className="text-white/60 text-lg leading-[1.75] mb-9 max-w-[480px]">
-            Benhub kết nối đại lý VLXD, nhà thầu với đội xe tải chuyên nghiệp
-            500kg–15 tấn. GPS realtime · Bốc xếp chuyên nghiệp · Giao đúng tiến độ.
+          <motion.p
+            variants={fadeUp}
+            className="text-white/60 text-lg leading-[1.75] mb-9 max-w-[480px]"
+          >
+            Benhub kết nối Khách hàng, nhà thầu với đội xe tải chuyên nghiệp
+            500kg–15 tấn. GPS realtime · Bốc xếp chuyên nghiệp · Giao đúng tiến
+            độ.
           </motion.p>
 
           {/* CTAs */}
@@ -100,7 +120,10 @@ export default function HeroBanner() {
           </motion.div>
 
           {/* Stats pills */}
-          <motion.div variants={fadeUp} className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <motion.div
+            variants={fadeUp}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-3"
+          >
             {stats.map((s) => (
               <div
                 key={s.label}
@@ -109,7 +132,9 @@ export default function HeroBanner() {
                 <span className="font-heading font-bold text-xl text-accent leading-none">
                   {s.value}
                 </span>
-                <span className="text-[0.7rem] text-white/45 leading-snug">{s.label}</span>
+                <span className="text-[0.7rem] text-white/45 leading-snug">
+                  {s.label}
+                </span>
               </div>
             ))}
           </motion.div>
@@ -123,8 +148,11 @@ export default function HeroBanner() {
           className="relative lg:pl-8"
         >
           {/* Main card */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/[0.07] shadow-2xl shadow-black/50 aspect-[4/3]"
-            style={{ background: "linear-gradient(145deg, #162a47 0%, #0a1a2e 100%)" }}
+          <div
+            className="relative rounded-3xl overflow-hidden border border-white/[0.07] shadow-2xl shadow-black/50 aspect-[4/3]"
+            style={{
+              background: "linear-gradient(145deg, #162a47 0%, #0a1a2e 100%)",
+            }}
           >
             {/* Inner grid */}
             <div className="dot-grid absolute inset-0 opacity-50" />
@@ -148,14 +176,18 @@ export default function HeroBanner() {
                 <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
                 <div>
                   <p className="text-[0.68rem] text-white/40">Tracking</p>
-                  <p className="text-xs text-white/85 font-medium">GPS Realtime</p>
+                  <p className="text-xs text-white/85 font-medium">
+                    GPS Realtime
+                  </p>
                 </div>
               </div>
               <div className="glass-dark rounded-lg px-3 py-2.5 flex items-center gap-2">
                 <Clock className="w-3.5 h-3.5 text-accent shrink-0" />
                 <div>
                   <p className="text-[0.68rem] text-white/40">Điều phối</p>
-                  <p className="text-xs text-white/85 font-medium">Trong 30 phút</p>
+                  <p className="text-xs text-white/85 font-medium">
+                    Trong 30 phút
+                  </p>
                 </div>
               </div>
             </div>
@@ -163,12 +195,14 @@ export default function HeroBanner() {
             {/* Top-right badge */}
             <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-green-500/15 border border-green-500/25 rounded-full px-3 py-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-[0.7rem] text-green-300 font-medium">Hệ thống hoạt động</span>
+              <span className="text-[0.7rem] text-green-300 font-medium">
+                Hệ thống hoạt động
+              </span>
             </div>
           </div>
 
           {/* Floating delivery card */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 16, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.9, duration: 0.5, ease }}
@@ -178,22 +212,32 @@ export default function HeroBanner() {
               <CheckCircle className="w-5 h-5 text-green-600" />
             </div>
             <div>
-              <p className="text-xs font-bold text-secondary leading-tight">Đơn hàng vừa giao</p>
-              <p className="text-[0.7rem] text-secondary/50 mt-0.5">Đại lý Phú Thọ · 2 phút trước</p>
+              <p className="text-xs font-bold text-secondary leading-tight">
+                Đơn hàng vừa giao
+              </p>
+              <p className="text-[0.7rem] text-secondary/50 mt-0.5">
+                Đại lý Phú Thọ · 2 phút trước
+              </p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Floating fleet badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: -16, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 1.1, duration: 0.5, ease }}
             className="absolute -top-4 -right-3 rounded-2xl px-5 py-3 text-white shadow-xl shadow-primary/40"
-            style={{ background: "linear-gradient(135deg, #e8521a 0%, #c94415 100%)" }}
+            style={{
+              background: "linear-gradient(135deg, #e8521a 0%, #c94415 100%)",
+            }}
           >
-            <p className="text-[0.68rem] font-medium text-white/75 uppercase tracking-wide">Fleet sẵn sàng</p>
-            <p className="font-heading font-bold text-2xl leading-tight">1,200+ xe</p>
-          </motion.div>
+            <p className="text-[0.68rem] font-medium text-white/75 uppercase tracking-wide">
+              Fleet sẵn sàng
+            </p>
+            <p className="font-heading font-bold text-2xl leading-tight">
+              1,200+ xe
+            </p>
+          </motion.div> */}
 
           {/* Decorative ring */}
           <div className="absolute -inset-4 rounded-[2rem] border border-white/[0.04] -z-10" />

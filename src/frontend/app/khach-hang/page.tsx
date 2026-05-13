@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Star, CheckCircle } from "lucide-react";
 import MiniHero from "@/components/shared/MiniHero";
 import SectionHeader from "@/components/shared/SectionHeader";
@@ -27,14 +28,19 @@ export default function KhachHangPage() {
             title="Được tin dùng bởi các doanh nghiệp hàng đầu"
           />
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {[...CLIENT_LOGOS, ...CLIENT_LOGOS].slice(0, 16).map((name, i) => (
+            {[...CLIENT_LOGOS, ...CLIENT_LOGOS].slice(0, 16).map((client, i) => (
               <div
-                key={`${name}-${i}`}
-                className="bg-white rounded-xl border border-border-soft h-16 flex items-center justify-center px-4 hover:border-primary/30 hover:shadow-sm transition-all duration-200"
+                key={`${client.name}-${i}`}
+                className="group bg-white rounded-xl border border-border-soft h-20 flex items-center justify-center px-5 hover:border-primary/30 hover:shadow-sm transition-all duration-200"
               >
-                <span className="text-sm font-semibold text-muted text-center">
-                  {name}
-                </span>
+                <Image
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  width={220}
+                  height={72}
+                  unoptimized
+                  className="h-11 w-full max-w-[170px] object-contain opacity-75 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                />
               </div>
             ))}
           </div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72" role="img" aria-labelledby="title">
+  <title id="title">VLXD Phú ThÍ</title>
+  <rect width="220" height="72" fill="none"/>
+  <g transform="translate(16 16)">
+    <rect x="0" y="17" width="17" height="17" rx="3" fill="#e8521a"/>
+    <rect x="20" y="8" width="17" height="26" rx="3" fill="#f5a623"/>
+    <rect x="40" y="0" width="17" height="34" rx="3" fill="#0f2340"/>
+    <path d="M0 40h57" stroke="#e2ddd5" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="86" y="31" fill="#0f2340" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="900" letter-spacing=".4">VLXD</text>
+  <text x="86" y="50" fill="#e8521a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800">Phú ThÍ</text>
+</svg>

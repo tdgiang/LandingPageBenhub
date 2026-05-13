@@ -40,6 +40,11 @@ export interface CaseStudy {
   results: string[];
 }
 
+export interface ClientLogo {
+  name: string;
+  logo: string;
+}
+
 export const POSTS: Post[] = [
   {
     id: '1',
@@ -331,13 +336,13 @@ export const SERVICES = [
   },
 ];
 
-export const CLIENT_LOGOS = [
-  'Tập đoàn Hòa Bình',
-  'Xây dựng Delta',
-  'VLXD Phú Thọ',
-  'Coteccons',
-  'Ricons Group',
-  'Xây dựng ABC',
-  'Đại lý Hoàng Gia',
-  'Tân Long Group',
+export const CLIENT_LOGOS: ClientLogo[] = [
+  { name: 'Tập đoàn Hòa Bình', logo: '/logos/client-hoa-binh.svg' },
+  { name: 'Xây dựng Delta', logo: '/logos/client-delta.svg' },
+  { name: 'VLXD Phú Thọ', logo: '/logos/client-vlxd-phu-tho.svg' },
+  { name: 'Coteccons', logo: '/logos/client-coteccons.svg' },
+  { name: 'Ricons Group', logo: '/logos/client-ricons.svg' },
+  { name: 'Xây dựng ABC', logo: '/logos/client-abc.svg' },
+  { name: 'Đại lý Hoàng Gia', logo: '/logos/client-hoang-gia.svg' },
+  { name: 'Tân Long Group', logo: '/logos/client-tan-long.svg' },
 ];

@@ -5,10 +5,34 @@ import { useInView } from "framer-motion";
 import { Users, MapPin, TrendingUp, Clock } from "lucide-react";
 
 const STATS = [
-  { value: 500, suffix: "+", label: "Khách hàng B2B", sub: "Đại lý & nhà thầu", Icon: Users },
-  { value: 50, suffix: "+", label: "Tỉnh thành", sub: "Phủ sóng toàn quốc", Icon: MapPin },
-  { value: 10000, suffix: "+", label: "Chuyến/tháng", sub: "Và tăng trưởng mỗi ngày", Icon: TrendingUp },
-  { value: 98, suffix: "%", label: "Tỷ lệ đúng hạn", sub: "Cam kết không thất hứa", Icon: Clock },
+  {
+    value: 500,
+    suffix: "+",
+    label: "Khách hàng B2B",
+    sub: "Đại lý & nhà thầu",
+    Icon: Users,
+  },
+  {
+    value: 50,
+    suffix: "+",
+    label: "Tỉnh thành",
+    sub: "Phủ sóng toàn quốc",
+    Icon: MapPin,
+  },
+  {
+    value: 10000,
+    suffix: "+",
+    label: "Chuyến/tháng",
+    sub: "Và tăng trưởng mỗi ngày",
+    Icon: TrendingUp,
+  },
+  {
+    value: 98,
+    suffix: "%",
+    label: "Tỷ lệ đúng hạn",
+    sub: "Cam kết không thất hứa",
+    Icon: Clock,
+  },
 ];
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -57,12 +81,20 @@ export default function StatsSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                 <Icon className="w-5 h-5 text-primary" />
               </div>
-              <div className="font-heading font-bold text-4xl lg:text-5xl xl:text-[3.5rem] leading-none mb-2"
-                style={{ background: "linear-gradient(135deg,#e8521a,#f5a623)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
+              <div
+                className="font-heading font-bold text-4xl lg:text-5xl xl:text-[3.5rem] leading-none mb-2"
+                style={{
+                  background: "linear-gradient(135deg,#e8521a,#f5a623)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
               >
                 <CountUp target={value} suffix={suffix} />
               </div>
-              <p className="text-sm font-semibold text-white/85 mb-0.5">{label}</p>
+              <p className="text-sm font-semibold text-white/85 mb-0.5">
+                {label}
+              </p>
               <p className="text-[0.7rem] text-white/35">{sub}</p>
             </div>
           ))}

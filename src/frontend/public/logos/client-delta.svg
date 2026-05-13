@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72" role="img" aria-labelledby="title">
+  <title id="title">Xây dñng Delta</title>
+  <rect width="220" height="72" fill="none"/>
+  <g transform="translate(18 12)">
+    <path d="M26 0 52 48H0z" fill="#0f4c81"/>
+    <path d="M26 14 39 39H13z" fill="#ffffff"/>
+    <path d="M26 25 33 39H19z" fill="#f5a623"/>
+  </g>
+  <text x="82" y="36" fill="#12395f" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900" letter-spacing="1.2">DELTA</text>
+  <text x="84" y="51" fill="#6b7280" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" letter-spacing="2">CONSTRUCTION</text>
+</svg>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { CLIENT_LOGOS, TESTIMONIALS } from "@/lib/data";
 
@@ -11,7 +12,7 @@ export default function ClientsSection() {
   return (
     <section className="bg-cream py-20 lg:py-28 relative overflow-hidden">
       {/* Subtle top glow */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-soft to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-border-soft to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
@@ -22,20 +23,25 @@ export default function ClientsSection() {
 
         {/* Logo grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-16">
-          {CLIENT_LOGOS.map((name, i) => (
+          {CLIENT_LOGOS.map((client, i) => (
             <motion.div
-              key={name}
+              key={client.name}
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.35, ease }}
-              className="bg-white rounded-xl border border-border-soft h-[60px] flex items-center justify-center px-4
+              className="bg-white rounded-xl border border-border-soft h-[72px] flex items-center justify-center px-5
                 hover:border-primary/25 hover:shadow-md hover:shadow-primary/5 hover:-translate-y-0.5
                 transition-all duration-300 cursor-pointer group"
             >
-              <span className="text-sm font-bold text-muted/70 group-hover:text-secondary transition-colors duration-200 text-center tracking-tight">
-                {name}
-              </span>
+              <Image
+                src={client.logo}
+                alt={`${client.name} logo`}
+                width={220}
+                height={72}
+                unoptimized
+                className="h-10 w-full max-w-[160px] object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+              />
             </motion.div>
           ))}
         </div>
@@ -53,7 +59,7 @@ export default function ClientsSection() {
                 shadow-sm hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-400 cursor-pointer overflow-hidden"
             >
               {/* Decorative quote mark */}
-              <span className="absolute top-3 right-5 font-heading font-bold text-[4.5rem] leading-none text-primary/[0.06] select-none pointer-events-none">
+              <span className="absolute top-3 right-5 font-heading font-bold text-[4.5rem] leading-none text-primary/6 select-none pointer-events-none">
                 &ldquo;
               </span>
 
@@ -69,13 +75,18 @@ export default function ClientsSection() {
               </blockquote>
 
               <div className="flex items-center gap-3 pt-4 border-t border-border-soft">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-heading font-bold text-white text-sm"
-                  style={{ background: "linear-gradient(135deg,#e8521a,#c94415)" }}
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-heading font-bold text-white text-sm"
+                  style={{
+                    background: "linear-gradient(135deg,#e8521a,#c94415)",
+                  }}
                 >
                   {t.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-secondary leading-tight">{t.name}</p>
+                  <p className="text-sm font-bold text-secondary leading-tight">
+                    {t.name}
+                  </p>
                   <p className="text-xs text-muted mt-0.5">
                     {t.role} · {t.company}
                   </p>

@@ -29,7 +29,10 @@ const ease = [0, 0, 0.2, 1] as const;
 
 export default function ContactCTA() {
   return (
-    <section id="lien-he" className="relative bg-secondary py-20 lg:py-28 overflow-hidden">
+    <section
+      id="lien-he"
+      className="relative bg-secondary py-20 lg:py-28 overflow-hidden"
+    >
       {/* Bg layers */}
       <div className="dot-grid absolute inset-0 opacity-50" />
       <div className="absolute top-0 left-0 right-0 h-px divider-gradient" />
@@ -37,7 +40,6 @@ export default function ContactCTA() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -28 }}
@@ -78,8 +80,15 @@ export default function ContactCTA() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3">
-              {["Báo giá trong 30 phút", "Không ràng buộc hợp đồng", "Hỗ trợ 24/7"].map((badge) => (
-                <span key={badge} className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-white/50 bg-white/[0.04] border border-white/[0.07] rounded-full px-3 py-1.5">
+              {[
+                "Báo giá trong 30 phút",
+                "Không ràng buộc hợp đồng",
+                "Hỗ trợ 24/7",
+              ].map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-white/50 bg-white/[0.04] border border-white/[0.07] rounded-full px-3 py-1.5"
+                >
                   <ArrowRight className="w-2.5 h-2.5 text-primary shrink-0" />
                   {badge}
                 </span>

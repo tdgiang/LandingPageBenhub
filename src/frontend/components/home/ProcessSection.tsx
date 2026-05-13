@@ -56,8 +56,12 @@ export default function ProcessSection() {
 
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* Connector line desktop */}
-          <div className="hidden lg:block absolute top-14 left-[15%] right-[15%] h-px z-0 pointer-events-none"
-            style={{ background: "linear-gradient(90deg, transparent, rgba(232,82,26,0.25), rgba(245,166,35,0.25), transparent)" }}
+          <div
+            className="hidden lg:block absolute top-14 left-[15%] right-[15%] h-px z-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, rgba(232,82,26,0.25), rgba(245,166,35,0.25), transparent)",
+            }}
           />
 
           {steps.map((step, i) => {

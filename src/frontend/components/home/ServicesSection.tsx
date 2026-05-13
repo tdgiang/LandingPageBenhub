@@ -53,8 +53,7 @@ export default function ServicesSection() {
       <div
         className="absolute inset-0 opacity-[0.025] pointer-events-none"
         style={{
-          backgroundImage:
-            "radial-gradient(#0f2340 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(#0f2340 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -79,7 +78,8 @@ export default function ServicesSection() {
                 className="group relative bg-white rounded-2xl border border-border-soft p-6 flex flex-col overflow-hidden cursor-pointer
                   hover:-translate-y-2 transition-all duration-400"
                 style={{
-                  transition: "transform 0.4s cubic-bezier(0,0,0.2,1), box-shadow 0.4s cubic-bezier(0,0,0.2,1)",
+                  transition:
+                    "transform 0.4s cubic-bezier(0,0,0.2,1), box-shadow 0.4s cubic-bezier(0,0,0.2,1)",
                 }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLElement).style.boxShadow =
@@ -101,7 +101,9 @@ export default function ServicesSection() {
                 </span>
 
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} flex items-center justify-center mb-5`}>
+                <div
+                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} flex items-center justify-center mb-5`}
+                >
                   <Icon className="w-6 h-6 text-primary" />
                 </div>
 
