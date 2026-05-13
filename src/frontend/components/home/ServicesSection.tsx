@@ -9,7 +9,7 @@ const services = [
   {
     number: "01",
     icon: Package,
-    title: "Giao hàng VLXD",
+    title: "Giao hàng",
     description:
       "Xi măng, sắt thép, gạch, cát đá – giao tận công trình. Đảm bảo nguyên vẹn, đúng số lượng.",
     href: "/dich-vu#giao-hang",
@@ -27,18 +27,18 @@ const services = [
   {
     number: "03",
     icon: Users,
-    title: "Dịch vụ bốc xếp",
+    title: "Tài xế và hỗ trợ",
     description:
-      "Đội bốc xếp chuyên nghiệp, bảo hiểm hàng hoá toàn hành trình. Hỗ trợ máy móc khi cần.",
+      "Tài xế chuyên nghiệp, bảo hiểm hàng hoá toàn hành trình. Hỗ trợ máy móc khi cần.",
     href: "/dich-vu#boc-xep",
     color: "from-emerald-500/20 to-teal-500/10",
   },
   {
     number: "04",
-    icon: Moon,
-    title: "Giao ngoài giờ",
+    icon: Truck,
+    title: "Xe cho thuê",
     description:
-      "Ca đêm 22:00–06:00 & cuối tuần theo tiến độ công trình. Phụ thu cố định 20%, minh bạch.",
+      "Xe cho thuê với đa dạng dung tích, đáp ứng mọi nhu cầu vận chuyển của bạn.",
     href: "/dich-vu#ca-dem",
     color: "from-violet-500/20 to-purple-500/10",
   },

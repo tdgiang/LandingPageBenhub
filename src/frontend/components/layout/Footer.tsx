@@ -37,8 +37,12 @@ export default function Footer() {
   return (
     <footer className="relative bg-secondary text-white overflow-hidden">
       {/* Subtle top glow line */}
-      <div className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(232,82,26,0.4), rgba(245,166,35,0.3), transparent)" }}
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(232,82,26,0.4), rgba(245,166,35,0.3), transparent)",
+        }}
       />
       {/* Bg dot grid */}
       <div className="dot-grid absolute inset-0 opacity-40 pointer-events-none" />
@@ -72,7 +76,10 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span>Tầng 5, Tòa nhà ABC, 123 Đường Láng, Hà Nội</span>
+                <span>
+                  Tầng 12, Việt Á Tower, Số 9, Duy Tân, Dịch Vọng Hậu, Quận Cầu
+                  Giấy, TP. Hà Nội
+                </span>
               </div>
             </div>
 
