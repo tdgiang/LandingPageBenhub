@@ -25,6 +25,60 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Premium utilities ─── */
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #e8521a 0%, #f5a623 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-white {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass on dark backgrounds */
+.glass-dark {
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Glass for light-on-white elements */
+.glass-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 40px rgba(15, 35, 64, 0.10), 0 1px 0 rgba(255,255,255,0.9) inset;
+}
+
+/* Dot grid overlay */
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Glow shadow for CTA buttons */
+.shadow-glow-primary {
+  box-shadow: 0 0 30px rgba(232, 82, 26, 0.4), 0 4px 15px rgba(232, 82, 26, 0.3);
+}
+
+/* Section divider gradient */
+.divider-gradient {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  height: 1px;
+}
+
+/* Card hover glow (applied via inline or whileHover) */
+.card-hover-glow:hover {
+  box-shadow: 0 20px 60px -10px rgba(232, 82, 26, 0.18), 0 4px 20px rgba(0,0,0,0.08);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
